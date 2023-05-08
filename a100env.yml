@@ -1,0 +1,13 @@
+name: tf-models
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - cudatoolkit=11.2
+  - numpy
+  - pip
+  - pip:
+    - tensorflow==2.9
+    - -e "official/pip_package"
+variables:
+  LD_LIBRARY_PATH: /data/work/anaconda3/envs/tf-models/lib
