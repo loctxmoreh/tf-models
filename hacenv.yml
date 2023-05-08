@@ -1,0 +1,11 @@
+name: tf-models
+dependencies:
+  - python=3.8
+  - pip
+  - pip:
+    - tensorflow==2.9
+    - -e "official/pip_package"
+
+# conda env create -f hacenv.yml
+# conda activate tf-models
+# update-moreh --tensorflow 2.9 --force
