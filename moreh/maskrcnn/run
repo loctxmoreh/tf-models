@@ -3,7 +3,9 @@
 output_dir="output"
 [[ ! -d $output_dir ]] && mkdir -p $output_dir
 
-export PYTHONPATH="/nas/loctx/tf-models:${PYTHONPATH}"
+# add the project's root to PYTHONPATH
+export PYTHONPATH="../../:${PYTHONPATH}"
+
 /usr/bin/env python3 train.py \
     --experiment=maskrcnn_resnetfpn_coco \
     --config_file=config.yaml \
