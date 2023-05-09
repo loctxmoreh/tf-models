@@ -8,4 +8,4 @@ export PYTHONPATH="/nas/loctx/tf-models:${PYTHONPATH}"
     --experiment=maskrcnn_resnetfpn_coco \
     --config_file=config.yaml \
     --mode=train \
-    --model_dir=$output_dir
+    --model_dir=$output_dir 2>&1 | tee ${output_dir}/train.log
