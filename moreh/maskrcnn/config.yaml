@@ -1,5 +1,5 @@
 runtime:
-  distribution_strategy: 'one_device'
+  distribution_strategy: 'off'
   mixed_precision_dtype: 'float16'
   num_gpus: 1
 task:
