@@ -6,5 +6,6 @@ output_dir="output"
 export PYTHONPATH="/nas/loctx/tf-models:${PYTHONPATH}"
 /usr/bin/env python3 train.py \
     --experiment=maskrcnn_resnetfpn_coco \
+    --config_file=config.yaml \
     --mode=train \
     --model_dir=$output_dir
