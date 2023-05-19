@@ -62,7 +62,7 @@ task:
               box: [36, 75], box: [76, 55], box: [72, 146],
               box: [142, 110], box: [192, 243], box: [459, 401]]
   train_data:
-    global_batch_size: 16
+    global_batch_size: 8
     dtype: float32
     input_path: 'coco/train*'
     is_training: true
@@ -92,7 +92,7 @@ task:
       use_tie_breaker: true
       anchor_thresh: 0.4
   validation_data:
-    global_batch_size: 8
+    global_batch_size: 2
     dtype: float32
     input_path: 'coco/val*'
     is_training: false
