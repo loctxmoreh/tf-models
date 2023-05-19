@@ -2,7 +2,7 @@
 # mAP 43.0
 runtime:
   distribution_strategy: 'off'
-  mixed_precision_dtype: 'float16'
+  mixed_precision_dtype: 'float32'
   enable_xla: true
 task:
   smart_bias_lr: 0.0
@@ -63,7 +63,7 @@ task:
               box: [142, 110], box: [192, 243], box: [459, 401]]
   train_data:
     global_batch_size: 16
-    dtype: float16
+    dtype: float32
     input_path: 'coco/train*'
     is_training: true
     drop_remainder: true
@@ -93,7 +93,7 @@ task:
       anchor_thresh: 0.4
   validation_data:
     global_batch_size: 8
-    dtype: float16
+    dtype: float32
     input_path: 'coco/val*'
     is_training: false
     drop_remainder: true
