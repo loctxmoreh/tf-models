@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+output_dir="output"
+[[ ! -d $output_dir ]] && mkdir -p $output_dir
+
+# add the project's root to PYTHONPATH
+export PYTHONPATH="../../:${PYTHONPATH}"
+
+/usr/bin/env python3 train.py \
+    --experiment=cascadercnn_spinenet_coco \
+    --config_file=config.yaml \
+    --mode=train \
+    --model_dir=$output_dir 2>&1 | tee ${output_dir}/train.log

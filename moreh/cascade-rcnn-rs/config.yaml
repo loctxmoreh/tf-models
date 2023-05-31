@@ -1,0 +1,14 @@
+runtime:
+  distribution_strategy: 'off'
+  mixed_precision_dtype: 'float32'
+  num_gpus: 1
+task:
+  train_data:
+    global_batch_size: 8
+    dtype: 'float32'
+  validation_data:
+    global_batch_size: 2
+    dtype: 'float32'
+trainer:
+  train_steps: 2315
+  validation_steps: 625
